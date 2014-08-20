@@ -1,0 +1,364 @@
+﻿<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>BITS - 101</title>
+		<meta name="description" content="a short introduction into Background Intelligent Transfer Service">
+		<meta name="author" content="Maciej Talaśka" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/moon.css" id="theme">
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>BITS</h1>
+					<h3>...a short introduction for .Net devs.</h3>
+					<p>
+						<small>Created by <a href="http://notonlyzeroesandones.site40.net/">Maciej Talaśka</a> / <a href="https://twitter.com/MaciekTalaska">@MaciekTalaska</a></small>
+					</p>
+				</section>
+
+				<section>
+					<h2>B&nbsp&nbspI&nbsp&nbspT&nbsp&nbspS&nbsp&nbsp&nbsp&nbspis:</h2>
+					<ul style="list-style-type:none">
+					<li><h3 style="display:inline">B</h3>ackground</li>
+					<li><h3 style="display:inline">I</h3>ntelligent</li>
+					<li><h3 style="display:inline">T</h3>ransfer</li>
+					<li><h3 style="display:inline">S</h3>ervice</li>
+					<ul>
+
+					<aside class="notes">
+						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
+					</aside>
+				</section>
+
+				<section>
+					<h2>History</h2>
+					<ul>
+					<li>1.0 (October 2001), Initial release, Windows XP</li>
+					<li>1.2 (July 2002), XP SP1, Windows 2000</li>
+					<li>1.5 (September 2003), +Windows 2003</li>
+					<li>2.0 (August 2004), XP, WS 2003 SP1, W2000</li>
+					<li>2.5 (June 2007), IPv6!</li>
+					<li>3.0 (November 2006), +Vista</li>
+					<li>4.0 (July 2009), Windows 7, Windows Server 2008 R2</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>BITS 1.0</h2>
+					<ul>
+					<li>first release</li>
+					<li>prioritized, throttled and asynchronous downloads</li>
+					<li>download resume</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>BITS 1.2</h2>
+					<ul>
+					<li>internal update and improvements</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h2>BITS 1.5</h2>
+					<ul>
+					<li>upload, upload-reply</li>
+					<li>command line execution for events</li>
+					<li>explicit credentials</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>BITS 2.0</h2>
+					<ul>
+					<li>concurrent foreground downloads</li>
+					<li>downloading range of files</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>BITS 2.5</h2>
+					<ul>
+					<li>custom http headers</li>
+					<li>secure http transports</li>
+					<li>IPv6</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>BITS 3.0</h2>
+					<ul>
+					<li>peer caching</li>
+					<li>notification</li>
+					<li>control http redirects</li>
+					<li>diagnostics, troubleshooting -> system log</li>
+					<li>only for Vista+, Windows Server 2008</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>BITS 4.0</h2>
+					<ul>
+					<li>improved peer caching</li>
+					<li>BITS compact server</li>
+					<li>more granular bandwidth throttling</li>
+					<li>only for Windows7+, Windows Server 2008 R2</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>BITS 5.0</h2>
+					<ul>
+					<li>IBackgroundCopyJob5</li>
+					<li>only for Windows 8+, Windows Server 2012</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>BITS for Linux?</h2>
+					No!
+					you can rsync with <code>--bwlimit</code> but...
+				</section>
+				
+				<section>
+					<h2>Who uses bits?</h2>
+					<ul>
+					<li>Microsoft: Office updates</li>
+					<li>Google: Chrome updates</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>What is bits good for?</h2>
+					<ul>
+					<li>Microsoft: Office updates</li>
+					<li>Google: Chrome updates</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h2>Using BITS</h2>
+				</section>
+				
+				<section>
+					<h2>BITS - introduction</h2>
+					<ul>
+					<li>what is job?</li>
+					<li>job == file?</li>
+					<li>may I use it for my own app?</li>
+					</ul>
+				</section>				
+
+				<section>
+					<h2>BITS job priority</h2>
+					<ul>
+					<li>foreground</li>
+					<li>high</li>
+					<li>normal</li>
+					<li>low</li>
+					</ul>
+					<br>
+					what are the statuses for?<br>
+					BITS 1.5 and earlier: only one job at a time.
+				</section>				
+
+				<section>
+					<h2>BITS job state</h2>
+					<ul>
+					<li>queued</li>
+					<li>connecting</li>	
+					<li>transferring</li>
+					<li>suspended</li>
+					<li>error</li>
+					<li>transient_error</li>
+					<li>transferred</li>
+					<li>acknowledged</li>
+					<li>cancelled</li>
+					</ul>
+				</section>				
+
+				<!-- http://msdn.microsoft.com/en-us/library/aa362811%28v=vs.85%29.aspx -->
+				<section>
+					<h2>BITS job type</h2>
+					<ul>
+					<li>download</li>
+					<li>upload (BITS 1.5+)</li>	
+					<li>upload reply (BITS 1.5+)</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h2>Robocopy vs BITS</h2>
+					<ul>
+					<li>Robocopy has nicer UI</li>
+					<li>Robocopy is capable of resuming downloads</li>
+					<li>Robocopy may synchronize whole folders</li>
+					<li>Robocopy for local networks, RDP connections...</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h2>BITS via cmd.exe?</h2>
+					<ul>
+					<li>bitsadmin.exe - (deprecated?)</li>
+					<li>you HAVE to *complete* job!</li>
+					</ul>
+					<pre><code data-trim contenteditable>
+bitsadmin /MONITOR
+bitsadmin /LIST 
+bitsadmin /COMPLETE (id)
+bitsadmin /CANCEL (id)
+					</code></pre>
+				</section>
+				
+				<section>
+					<h2>BITS via Powershell</h2>
+					<ul>
+					<li>Add-BitsFile</li>
+					<li>Complete-BitsTransfer</li>
+					<li>Get-BitsTransfer</li>
+					<li>Remove-BitsTransfer</li>
+					<li>Resume-BitsTransfer!</li>
+					<li>Set-BitsTransfer</li>
+					<li>Start-BitsTransfer</li>
+					<li>Suspend-BitsTransfer</li>
+					</ul>
+				</section>
+				
+				<!-- http://msdn.microsoft.com/en-us/library/dd904466(v=vs.85).aspx -->
+				<section>
+					<h2>I don't have any BITS* Cmdlets!</h2>
+					<pre class="fragment"><code data-trim contenteditable>
+Import-Module BitsTransfer
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>BITS - best practices</h2>
+					<ul>
+					<li>100 jobs per machine</li>
+					<li>10 jobs per application</li>
+					<li>10 files per job</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>BITS - best practices: job persistence</h2>
+					<ul>
+					<li>COMPLETE</li>
+					<li>CANCEL</li>
+					<li>JobInactivityTimeout (90 days)</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>BITS - best practices: foreground vs background</h2>
+					<ul>
+					<li>foreground - for critical tasks</li>
+					<li>foreground - size limit (2GB)</li>
+					<li>foreground - resume?</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h2>BITS via C#</h2>
+					<blockquote cite="http://msdn.microsoft.com/en-us/library/windows/desktop/bb968799(v=vs.85).aspx">
+						&ldquo;BITS is designed for C and C++ developers.&rdquo;
+					</blockquote>					
+					<br>
+					Not really true...
+					<br><br>
+					<ul>
+					<li><a href="http://msdn.microsoft.com/en-us/magazine/cc188766.aspx#S1">Write Auto-Updating Apps with .NET and the Background Intelligent Transfer Service API</a></li>
+					<li><a href="http://sharpbits.codeplex.com">SharpBits</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>BitsMonitor</h2>
+					<a href="https://bitsmonitor.codeplex.com/">https://bitsmonitor.codeplex.com/</a><br>
+					<img width="640" height="218" src="bitsmonitor9.png" alt="Meny">
+					<ul>
+					<li>cmd-line + GUI</li>
+					<li>autostart</li>
+					<li>auto-restart</li>
+					<li>shutdown when done</li>
+					<li>active jobs</li>
+					<li>AUTO-COMPLETE!</li>
+					</ul>
+				</section>
+				
+				<section>
+					<h1>Fin</h1>
+					<h2>Q & A?</h2>
+					<h3 style="font-variant:none; text-transform: none">Maciej Talaśka</h3>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
